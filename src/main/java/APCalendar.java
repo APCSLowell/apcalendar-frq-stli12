@@ -59,9 +59,9 @@ return count;
    */
   public static int dayOfWeek(int month, int day, int year)
   {
-    int weeksAfter = dayOfYear(month, day, year) ;
-    int first = firstDayOfyear(year);
-    return (first + weeksAfter - 1) % 7;
+    int weeksAfter = dayOfYear(month, day, year) % 7;
+    int first = firstDayOfYear(year);
+    return first + weeksAfter;
     
   }
 }
